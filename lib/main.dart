@@ -1,43 +1,59 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MisIconosAPP());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class MisIconosAPP extends StatelessWidget {
+  const MisIconosAPP({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Janna Ramirez G"),
+          titleTextStyle: TextStyle(color: Colors.black54, fontSize: 25),
+          centerTitle: true,
+          backgroundColor: Color(0xff9d6eed),
+        ),
+        body: Column(
+          children: <Widget>[
+            Text(
+              "     Janna Ramirez G \n Mat:22308051281287",
+              style: TextStyle(
+                  fontSize: 20,
+                  fontStyle: FontStyle.italic,
+                  color: Color(0xffe88ff8)),
+            ), //
+            SizedBox(height: 100),
+            const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Icon(
+                    Icons.thumb_down_alt_sharp,
+                    color: Colors.pink,
+                    size: 30.0,
+                    semanticLabel: 'Text to announce in accessibility modes',
+                  ),
+                  Icon(
+                    Icons.account_balance_wallet_outlined,
+                    color: Colors.green,
+                    size: 30.0,
+                  ),
+                  Icon(
+                    Icons.add_to_drive_sharp,
+                    color: Colors.deepPurpleAccent,
+                    size: 36.0,
+                  ),
+                  Icon(
+                    Icons.abc_sharp,
+                    color: Color(0xffa9870b),
+                    size: 36.0,
+                  ),
+                ]),
+          ],
         ),
       ),
     );
-  }
-}
+  } // FIN WIDGETS
+} // FIN CLASE MISICONOS
